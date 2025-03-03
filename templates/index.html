@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Editor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Editor</h1>
+        <p>Upload a PDF file to edit its content</p>
+        
+        <div class="upload-box">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="file-input">
+                    <input type="file" id="file" name="file" accept=".pdf" required>
+                    <label for="file">Choose a PDF file</label>
+                </div>
+                <button type="submit" class="upload-btn">Upload and Edit</button>
+            </form>
+        </div>
+        
+        <div class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Edit PDF text content</li>
+                <li>Correct spelling mistakes</li>
+                <li>Preserves formatting (colors, bold text, etc.)</li>
+                <li>No files are permanently stored</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
